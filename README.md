@@ -1,4 +1,4 @@
-# CodeIgniter 4 Application Starter
+# Lector de QR
 
 ## What is CodeIgniter?
 
