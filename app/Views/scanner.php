@@ -74,6 +74,10 @@
 
               <?= form_close(); ?>
 
+              <audio id="audio" style="display: none;" controls>
+                <source type="audio/mpeg" src="<?= base_url() . "/assets/barcode.mpeg";?>">
+              </audio>
+
               <video id="preview"></video>
               <script>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
@@ -87,7 +91,9 @@
                     console.error(e);
                   });
                   scanner.addListener('scan', function (content) {
+                    var audio = document.getElementById("audio");
                     document.getElementById('email').value=content;
+                    audio.play();
                     document.forms[0].submit();
                   });
               </script> 
