@@ -10,9 +10,9 @@
     <!--<script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>-->
     
     <!--Bootstrap-->
-    <link rel="stylesheet" href="<?= base_url() . "/bootstrap/dist/css/bootstrap.min.css"?>">
-    <script src="<?= base_url() . "/bootstrap/dist/js/bootstrap.min.js"?>"></script>
-    <script src="<?= base_url() . "/bootstrap/dist/js/popper.min.js"?>"></script>
+    <link rel="stylesheet" href="<?= base_url() . "/bootstrap/css/bootstrap.min.css"?>">
+    <script src="<?= base_url() . "/bootstrap/js/bootstrap.min.js"?>"></script>
+    <script src="<?= base_url() . "/bootstrap/js/popper.min.js"?>"></script>
 
     <style>
       body{
@@ -46,10 +46,7 @@
           <div class="row">
 
             <div class="col">
-              <form action="<?= base_url() . "/save"?>" method="post" name="myform">
-                <input type="hidden" name="text" id="text" readonyy="" placeholder="scan qrcode" class="form-control" onchange="frmSubmit()">
-              </form>
-              
+
               <img src="<?= base_url() . "/assets/tux.png"?>" width=38% alt="TESVG">
               <hr>
               <img src="<?= base_url() . "/assets/os.png"?>" width=38% alt="TESVG">
@@ -61,6 +58,22 @@
 
             <div class="col">
               <div class="card text-center" style="width: 35rem;">
+              <?= form_open(); ?>
+
+              <?= form_input(array_merge($email, ['class' => $email['class'] . ' ' . ($validation->hasError('email') ? 'is-invalid' : '')])) ?>
+              <?php if ($error = $validation->getError('email')){ ?>
+                <div class="alert alert-danger" role="alert">
+                  <?= $error ?>
+                </div>
+              <?php }else{?>
+                <div class="alert alert-success" role="alert">
+                  Registrado exitosamente
+                </div>
+              <?php }?>
+
+
+              <?= form_close(); ?>
+
               <video id="preview"></video>
               <script>
                 let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
@@ -74,7 +87,7 @@
                     console.error(e);
                   });
                   scanner.addListener('scan', function (content) {
-                    document.getElementById('text').value=content;
+                    document.getElementById('email').value=content;
                     document.forms[0].submit();
                   });
               </script> 
