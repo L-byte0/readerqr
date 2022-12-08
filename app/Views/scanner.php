@@ -18,25 +18,18 @@
       body{
         background: #FBD3E9;
         background: -webkit-linear-gradient(to left, #FBD3E9, #BB377D);
-        background: linear-gradient(to left, #FBD3E9, #BB377D);
+        background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
       }
     </style>
 
-    <title>TESVG Semana de la Ciencia y la Tecnología</title>
+    <title>TESVG Semana del Administrador</title>
   </head>
 
   <body>    
     <div class="container text-center">
       <div class="card d-flex">
         <div class="card-header d-flex justify-content-center flex-column align-items-center">
-          <img src="<?= base_url() . "/assets/logs.jpg"?>" width=100% alt="TESVG">
-
-          <h2 class="card-title text-center">
-            Bienvenido a la IV Feria de Ciencia y Tecnología
-        </h2>
-        <span style="font-size: 1.3rem;">
-            TESVG <strong>2022</strong>
-        </span>
+          <img src="<?= base_url() . "/assets/logs.png"?>" width=100% alt="TESVG">
         </div>
 
     
@@ -47,11 +40,11 @@
 
             <div class="col">
 
-              <img src="<?= base_url() . "/assets/tux.png"?>" width=38% alt="TESVG">
+              <img src="<?= base_url() . "/assets/admin1.png"?>" width=38% alt="TESVG">
               <hr>
-              <img src="<?= base_url() . "/assets/os.png"?>" width=38% alt="TESVG">
+              <img src="<?= base_url() . "/assets/admin2.png"?>" width=38% alt="TESVG">
               <hr>
-              <img src="<?= base_url() . "/assets/ia.png"?>" width=38% alt="TESVG">
+              <img src="<?= base_url() . "/assets/admin6.png"?>" width=38% alt="TESVG">
               <hr>
             </div>
 
@@ -102,11 +95,11 @@
             </div>
 
             <div class="col">
-              <img src="<?= base_url() . "/assets/circuito.png"?>" width=38% alt="TESVG">
+              <img src="<?= base_url() . "/assets/admin3.png"?>" width=38% alt="TESVG">
               <hr>
-              <img src="<?= base_url() . "/assets/placa.png"?>" width=38% alt="TESVG">
+              <img src="<?= base_url() . "/assets/admin4.png"?>" width=38% alt="TESVG">
               <hr>
-              <img src="<?= base_url() . "/assets/chip.png"?>" width=38% alt="TESVG">
+              <img src="<?= base_url() . "/assets/admin5.png"?>" width=38% alt="TESVG">
               <hr>
             </div>
 
